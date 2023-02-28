@@ -26,7 +26,7 @@ class GreetingController {
 
 	@GetMapping("/greeting")
 	public String greeting() {
-		return properties.getGreeting();
+		return "updated automatically!!! " + properties.getGreeting();
 	}
 }
 
