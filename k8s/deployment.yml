@@ -21,7 +21,7 @@ spec:
       containers:
         - name: greeting-service
           image: greeting-service
-          imagePullPolicy: Never
+          imagePullPolicy: IfNotPresent
           lifecycle:
             preStop:
               exec:
