@@ -37,7 +37,7 @@ jobs:
       - name: Build, unit tests and integration tests
         run: |
           chmod +x mvnw
-          ./mvn clean verify
+          ./mvnw clean verify
       - name: Validate Kubernetes manifests
         uses: stefanprodan/kube-tools@v1
         with:
