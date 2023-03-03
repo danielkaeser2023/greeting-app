@@ -3,6 +3,7 @@ package com.example.greetingapp;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -18,6 +19,7 @@ public class GreetingAppApplication {
 	}
 }
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 class GreetingController {
@@ -26,6 +28,7 @@ class GreetingController {
 
 	@GetMapping("/greeting")
 	public String greeting() {
+		log.info("Hallo, ich wurde angefragt");
 		return "test123? " + properties.getGreeting();
 	}
 }
