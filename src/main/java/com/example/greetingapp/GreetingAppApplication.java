@@ -29,7 +29,7 @@ class GreetingController {
 	@GetMapping("/greeting")
 	public String greeting() {
 		log.info("Hallo, ich wurde angefragt");
-		return "test123? " + properties.getGreeting();
+		return "change heute ? " + properties.getGreeting();
 	}
 }
 
